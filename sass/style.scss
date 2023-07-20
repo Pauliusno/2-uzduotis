@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+$maintextcolor:rgb(24, 24, 56);
+$headertextcolor: black;
+
+.absolute{
+    height: 50px;
+    background-color: aqua;
+}
+
+body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    
+    
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: $headertextcolor;
+   box-sizing: border-box;
+   height: 50px;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   position: fixed;
+   width: 100%;
+   z-index: 1;
+   
+
+   nav ul {
+list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   
+
+}
+
+   .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+   }
+
+   a{
+    text-decoration: none;
+    color: $headertextcolor;
+    &:hover{
+        color: rgb(104, 104, 104);
+    }
+   }
+
+   .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   }
+   .language-button{
+    all: unset;
+    display: flex;
+    align-items: center;
+    
+    gap: 5px;
+    border: none;
+
+    
+    
+    
+   }
+    
+}
+
+.log-in{
+    all:unset;
+    border: 2px solid black;
+    padding: 0.5rem 0.5rem;
+}
