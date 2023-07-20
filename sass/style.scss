@@ -1,14 +1,22 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Lobster', cursive;
+font-family: 'Roboto', sans-serif;
 }
 $maintextcolor:rgb(24, 24, 56);
 $headertextcolor: black;
+$ptextcolor: rgb(52, 20, 101);
 
 .absolute{
     height: 50px;
-    background-color: aqua;
-}
+    
+
+    
+    
+    
+    
+ }
 
 body{
     overflow-x: hidden;
@@ -23,12 +31,21 @@ header{
    align-items: center;
    color: $headertextcolor;
    box-sizing: border-box;
-   height: 50px;
+   height: 55px;
    padding-left: 1rem;
    padding-right: 1rem;
    position: fixed;
    width: 100%;
    z-index: 1;
+   background-color: white;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+   
+
+   .burger-menu{
+    display: none;
+   }
    
 
    nav ul {
@@ -36,7 +53,7 @@ list-style: none;
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 1rem;
+   gap: 2rem;
    
 
 }
@@ -54,7 +71,11 @@ list-style: none;
     &:hover{
         color: rgb(104, 104, 104);
     }
+    
    }
+.phone-menu{
+    display: none;
+}
 
    .logo{
     display: flex;
@@ -72,7 +93,6 @@ list-style: none;
 
     
     
-    
    }
     
 }
@@ -81,4 +101,137 @@ list-style: none;
     all:unset;
     border: 2px solid black;
     padding: 0.5rem 0.5rem;
+}
+
+.section-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px;
+    max-width: 1560px;
+    margin: 0 auto; /* Center the section horizontally within its parent container */
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 1rem;
+    min-width: 400px;
+
+.first-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   max-width: 600px;
+   color: $ptextcolor;
+
+   button{
+    all:unset;
+    color: white;
+    background-color: rgb(80, 14, 112);
+    width: 300px;
+    text-align: center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-radius: 5PX;
+    &:hover{
+        background-color:rgb(35, 7, 49) ;
+    }
+    
+   }
+
+   a{
+    all: unset;
+   }
+    
+   .security-logo{
+    display: flex;
+    align-items: center;
+   }
+    
+}
+}
+
+.ratings{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    height: 250px;
+    padding-top: 4rem;
+
+.google-ratings{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+
+}
+.Truspilot-ratings{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+}
+
+.h-text{
+    text-align: center;
+    color: $ptextcolor;
+
+}
+
+.p-text{
+   text-align: center;
+   color: $ptextcolor;
+
+}
+       
+    
+
+
+@media screen and (max-width:720px) {
+   header{
+    .nav-bar{
+        display: none;
+    }
+    .language-button{
+        display: none;
+    }
+
+    .logo{
+      display: none;
+    }
+
+    .phone-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+   
+   }
+
+   .section-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    
+
+    .first-container{
+        align-items: center;
+
+    }
+    .web-hosting{
+        width: 100%;
+    }
+    }
+    .ratings{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .h-text{
+        font-size: 18px;
+        padding-top: 2rem;
+        padding-left: 1rem;
+
+    }
 }
