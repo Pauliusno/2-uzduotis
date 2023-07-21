@@ -48,6 +48,7 @@ $ptextcolor: rgb(52, 20, 101);
 body{
     overflow-x: hidden;
     box-sizing: border-box;
+    min-width: 350px;
     
     
 }
@@ -85,11 +86,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
    }
 
    a{
-    @include atag(red);
+    @include atag(rgb(99, 98, 98));
     }
     
    }
@@ -459,6 +460,8 @@ display: none;
             border-color: rgb(183, 0, 255);
         }
 
+        
+
     }
     
     
@@ -477,20 +480,36 @@ display: none;
 
   .baked-wrapper{
     display: flex;
-    height: 100%;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-items: center;
+    height: 100%;
     color: white;
     
-    margin: 0 auto;
+    margin: 0rem auto;
     gap: 1rem;
-    max-width: 400px;
-    background-color: purple;
+    
+    background-color:#2F1C6A;
     padding: 2rem 2rem;
+    
 
     .omlete-picture{
-        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .uno{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        .tres{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        
     }
   }
  
