@@ -184,8 +184,83 @@ gap: 10px;
    color: $ptextcolor;
 
 }
-       
+
+.table-wrapper{
+    padding: 2rem 2rem;
+    max-width: 1040px;
+    margin: 0 auto;
+    color:$ptextcolor;
+    button{all:unset;
+        color: white;
+        background-color: rgb(80, 14, 112);
+        width: 150px;
+        text-align: center;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        border-radius: 5PX;
+        &:hover{
+            background-color:rgb(35, 7, 49) ;
+        }}
     
+}
+.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid $ptextcolor;
+    grid-template-rows: auto;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .table-element{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    .second-element{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-right: 1px solid;
+    }
+
+
+.element{
+    display: flex;
+    align-items: center;
+    
+    
+    
+    
+}
+       
+  .first-table-element{
+    display: flex;
+    justify-content: space-between;
+    
+  }  
+
+  .first-table-element-border{
+    border-right: 1px solid black;
+    padding-right:1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    
+  }  
+ 
+}
+
 
 
 @media screen and (max-width:720px) {
