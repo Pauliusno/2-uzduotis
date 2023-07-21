@@ -52,17 +52,20 @@ header a {
   color: black;
 }
 header a:hover {
-  color: rgb(104, 104, 104);
+  color: red;
 }
-header .phone-menu {
+
+.phone-menu {
   display: none;
 }
-header .logo {
+
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .language-button {
+
+.language-button {
   all: unset;
   display: flex;
   align-items: center;
@@ -139,6 +142,8 @@ header .language-button {
 .h-text {
   text-align: center;
   color: rgb(52, 20, 101);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .p-text {
@@ -209,6 +214,79 @@ header .language-button {
   gap: 5px;
 }
 
+.button-like-thing {
+  background-color: purple;
+  padding: 0.2rem 0.2rem;
+  border-radius: 20px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  all: unset;
+  color: rgb(52, 20, 101);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.options:hover {
+  color: rgb(24, 24, 56);
+}
+
+.some-text {
+  text-align: center;
+  padding: 2rem 2rem;
+  color: rgb(52, 20, 101);
+}
+
+.nav-bar-footer {
+  border-bottom: 1px solid rgb(43, 42, 42);
+  padding-bottom: 1.1rem;
+  width: 500px;
+  margin: 0 auto;
+}
+.nav-bar-footer a {
+  text-decoration: none;
+  color: black;
+  transition: 0.4s;
+  padding-bottom: 1rem;
+}
+.nav-bar-footer a:hover {
+  color: rgb(183, 0, 255);
+}
+.nav-bar-footer a:hover {
+  border-bottom: 3px solid rgb(183, 0, 255);
+}
+.nav-bar-footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-bar-footer .active {
+  border-bottom: 3px solid rgb(183, 0, 255);
+}
+
+.picture-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+}
+
+.selector {
+  display: none;
+}
+
+.baked-wrapper {
+  display: none;
+}
+
 @media screen and (max-width: 720px) {
   header .nav-bar {
     display: none;
@@ -244,5 +322,73 @@ header .language-button {
     font-size: 18px;
     padding-top: 2rem;
     padding-left: 1rem;
+  }
+  .table {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .table .second-table {
+    width: 100%;
+    border-bottom: 2px solid;
+    padding-bottom: 1rem;
+    border-right: none;
+  }
+  .table .second-table .second-element {
+    border-right: none;
+  }
+  .table .table-element {
+    width: 100%;
+    border-right: none;
+  }
+  .table .third-table {
+    display: none;
+  }
+  .table .first-table-element-border {
+    border-right: none;
+  }
+  .selector {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem;
+  }
+  .selector select {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .selector select:hover {
+    border-color: rgb(183, 0, 255);
+  }
+  .nav-bar-footer {
+    display: none;
+  }
+  .picture-container {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .picture-container span {
+    display: none;
+  }
+  .baked-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    margin: 0 auto;
+    gap: 1rem;
+    max-width: 400px;
+    background-color: purple;
+    padding: 2rem 2rem;
+  }
+  .baked-wrapper .omlete-picture {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

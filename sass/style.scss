@@ -1,3 +1,30 @@
+@mixin h1text{
+    text-align: center;
+    color: $ptextcolor;
+}
+
+@mixin atag ($hovercolor){
+    text-decoration: none;
+    color: $headertextcolor;
+    &:hover{
+        color:$hovercolor ;
+    }
+    
+        
+
+}
+
+
+@mixin navul{
+    list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+}
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -49,11 +76,7 @@ header{
    
 
    nav ul {
-list-style: none;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 2rem;
+@include navul()
    
 
 }
@@ -66,10 +89,7 @@ list-style: none;
    }
 
    a{
-    text-decoration: none;
-    color: $headertextcolor;
-    &:hover{
-        color: rgb(104, 104, 104);
+    @include atag(red);
     }
     
    }
@@ -95,7 +115,8 @@ list-style: none;
     
    }
     
-}
+
+
 
 .log-in{
     all:unset;
@@ -176,6 +197,8 @@ gap: 10px;
 .h-text{
     text-align: center;
     color: $ptextcolor;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
 }
 
@@ -256,12 +279,88 @@ gap: 10px;
     flex-direction: column;
     gap: 5px;
     
+   
     
   }  
  
 }
+.button-like-thing{
+    background-color: purple;
+    padding: 0.2rem 0.2rem;
+    border-radius: 20px;
+    
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .options {
+    all: unset;
+    color: $ptextcolor;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+   &:hover{
+    color: $maintextcolor;
+   }
+  }
+
+  .some-text{
+    text-align: center;
+    padding: 2rem 2rem;
+    color: $ptextcolor;
+  }
+
+  .nav-bar-footer{
+    border-bottom: 1px solid rgb(43, 42, 42);
+    padding-bottom: 1.1rem;
+    width: 500px;
+    margin: 0 auto;
+    a{
+        @include atag(rgb(183, 0, 255));
+        transition: 0.4s;
+       
+        padding-bottom: 1rem;
+        &:hover{
+            border-bottom: 3px solid rgb(183, 0, 255);
+        }
+        
+
+        }   
 
 
+    nav ul{
+        @include navul();
+        
+        
+ 
+    }
+    .active{
+        border-bottom: 3px solid rgb(183, 0, 255); 
+    }
+    
+  }
+
+  .picture-container{
+    display: flex;
+    // align-items: ce;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 2rem;
+  }
+
+  .selector{
+    display: none;
+  }
+
+  .baked-wrapper{
+display: none;
+  }
+  
 
 @media screen and (max-width:720px) {
    header{
@@ -309,4 +408,91 @@ gap: 10px;
         padding-left: 1rem;
 
     }
+    .table{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+        
+        .second-table{
+            width: 100%;
+            border-bottom: 2px solid;
+            padding-bottom: 1rem;
+            border-right: none;
+
+            .second-element{
+                border-right: none;
+            }
+            
+        }
+
+        .table-element{
+            width: 100%;
+            border-right: none;
+            
+        }
+
+        .third-table{
+            display: none;
+        }
+        .first-table-element-border{
+            border-right: none;
+        }
+
+
+    }
+    .selector{
+        display: flex;
+        justify-content: center;
+        padding: 2rem 2rem;
+        
+
+        
+    select {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+        background-color: white;
+        width: 100%;
+        border-radius: 5px;
+        &:hover{
+            border-color: rgb(183, 0, 255);
+        }
+
+    }
+    
+    
 }
+.nav-bar-footer{
+    display:none;
+}
+.picture-container{
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    span{
+        display: none;
+    }
+  }
+
+  .baked-wrapper{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    
+    margin: 0 auto;
+    gap: 1rem;
+    max-width: 400px;
+    background-color: purple;
+    padding: 2rem 2rem;
+
+    .omlete-picture{
+        width: 100%;
+    }
+  }
+ 
+}
+
